@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>解锁码生成器</title>
+<style>
+body{font-family:Inter,'Microsoft YaHei',-apple-system,sans-serif;background:linear-gradient(135deg,#f8f9fc 0%,#eef1f8 100%);color:#1d1d1f;padding:28px;min-height:100vh}
+.container{max-width:700px;margin:0 auto}
+h1{font-size:21px;font-weight:600;letter-spacing:-.3px;margin-bottom:4px}
+.sub{color:#8e8e98;font-size:13px;margin-bottom:20px}
+.btn{background:#1d1d1f;color:#fff;border:none;padding:10px 24px;border-radius:8px;font-size:14px;cursor:pointer;transition:all .2s;font-weight:500}
+.btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.15)}
+textarea{width:100%;height:400px;background:#fff;color:#1d1d1f;border:1px solid #e4e8ee;border-radius:10px;padding:14px;font-size:13px;font-family:monospace;margin-top:16px;resize:vertical;transition:border-color .2s}
+textarea:focus{outline:none;border-color:#1d1d1f;box-shadow:0 0 0 3px rgba(0,0,0,.06)}
+.hint{font-size:12px;color:#8e8e98;margin-top:8px}
+/* ===== 响应式：手机适配 ===== */
+@media(max-width:640px){
+  body{padding:14px}
+  h1{font-size:18px}
+  .sub{font-size:12px}
+  .btn{width:100%;padding:11px;font-size:14px;min-height:44px}
+  textarea{height:250px;font-size:12px;padding:10px}
+  .hint{font-size:11px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>🔑 解锁码生成器</h1>
+<p class="sub">每次生成50个不同的解锁码，复制到面包多/爱发电自动发货</p>
+<button class="btn" onclick="gen()">生成50个解锁码</button>
+<textarea id="out" readonly placeholder="点击按钮生成解锁码……"></textarea>
+<div class="hint">建议：卖完一批再生成下一批，不要把全部码一次性挂上去</div>
+<div style="text-align:center;color:#c7c7cc;font-size:11px;margin-top:20px">免责声明：本工具为写作辅助，检查结果仅供参考，不可替代专业编辑审校。</div>
+</div>
+<script>
+function gen(){const n=50,out=[],ch='abcdefghijkmnpqrstuvwxyz23456789';for(let i=0;i<n;i++){let s='';for(let j=0;j<7;j++)s+=ch[Math.floor(Math.random()*ch.length)];let sum=0;for(let j=0;j<7;j++)sum+=s.charCodeAt(j);s+=ch[sum%31];out.push(s.slice(0,4)+'-'+s.slice(4))}document.getElementById('out').value=out.join('\n')}
+gen();
+</script>
+</body>
+</html>
