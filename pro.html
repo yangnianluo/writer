@@ -194,7 +194,7 @@ textarea::placeholder{color:var(--text3)}
 
 <div class="unlock-bar" id="barPro">
   <div class="left">
-    <div class="title" id="tPro">🔒 高级版 ¥25</div>
+    <div class="title" id="tPro">🔒 高级版 ¥59</div>
     <div class="hint">追尾规则 · 替读者总结 · 对话评分 · 五感均衡 · 弱动词 · 视角一致性 · 后续规则持续更新</div>
   </div>
   <div class="right" id="aPro">
@@ -205,7 +205,7 @@ textarea::placeholder{color:var(--text3)}
 
 <div class="unlock-bar" style="border-color:var(--pvipc);background:var(--card-bg)" id="bar终极版">
   <div class="left">
-    <div class="title" style="color:var(--pvipc)" id="t终极版">🔥 终极版 ¥69</div>
+    <div class="title" style="color:var(--pvipc)" id="t终极版">🔥 终极版 ¥119</div>
     <div class="hint">每条违规附带改写指导 · 教你把30分拉到60分 · 含打戏文戏专项</div>
   </div>
   <div class="right" id="a终极版">
@@ -237,8 +237,8 @@ textarea::placeholder{color:var(--text3)}
     <button class="btn btn-sm btn-ghost" onclick="ta()" style="font-size:12px">收起</button>
   </div>
   <div class="admin-grid">
-    <div><div style="font-size:12px;color:#a78bfa;margin-bottom:4px">🔑 高级版码（¥25）</div><textarea id="cPro" placeholder="每行一个码"></textarea></div>
-    <div><div style="font-size:12px;color:var(--pvipc);margin-bottom:4px">🔥 终极版码（¥69）</div><textarea id="c终极版" placeholder="每行一个码"></textarea></div>
+    <div><div style="font-size:12px;color:#a78bfa;margin-bottom:4px">🔑 高级版码（¥59）</div><textarea id="cPro" placeholder="每行一个码"></textarea></div>
+    <div><div style="font-size:12px;color:var(--pvipc);margin-bottom:4px">🔥 终极版码（¥119）</div><textarea id="c终极版" placeholder="每行一个码"></textarea></div>
   </div>
   <div style="display:flex;gap:8px;margin-top:8px">
     <button class="btn btn-sm" onclick="uc()" style="background:var(--btn-bg);font-size:12px">更新</button>
@@ -335,8 +335,8 @@ function ub(t){
   }
   if(!cleared)return alert('未找到绑定记录');
   sb(b);
-  if(t==='pro'){pu=false;bc.pro=null;document.getElementById('tPro').innerHTML='🔒 高级版 ¥25';document.getElementById('aPro').innerHTML='<input type="text" id="iPro" placeholder="高级解锁码" onkeydown="if(event.key===\'Enter\')ul(\'pro\')"><button class="ubtn" onclick="ul(\'pro\')" style="background:var(--btn-bg)">解锁</button>';rules.forEach(r=>{if(r.l==='deep')r.enabled=false})}
-  else{vu=false;bc.vvip=null;document.getElementById('t终极版').innerHTML='🔥 终极版 ¥69';document.getElementById('a终极版').innerHTML='<input type="text" id="i终极版" placeholder="终极版解锁码" onkeydown="if(event.key===\'Enter\')ul(\'vvip\')"><button class="ubtn" onclick="ul(\'vvip\')" style="background:#ea580c">解锁</button>';rules.forEach(r=>{if(r.l==='vip')r.enabled=false})}
+  if(t==='pro'){pu=false;bc.pro=null;document.getElementById('tPro').innerHTML='🔒 高级版 ¥59';document.getElementById('aPro').innerHTML='<input type="text" id="iPro" placeholder="高级解锁码" onkeydown="if(event.key===\'Enter\')ul(\'pro\')"><button class="ubtn" onclick="ul(\'pro\')" style="background:var(--btn-bg)">解锁</button>';rules.forEach(r=>{if(r.l==='deep')r.enabled=false})}
+  else{vu=false;bc.vvip=null;document.getElementById('t终极版').innerHTML='🔥 终极版 ¥119';document.getElementById('a终极版').innerHTML='<input type="text" id="i终极版" placeholder="终极版解锁码" onkeydown="if(event.key===\'Enter\')ul(\'vvip\')"><button class="ubtn" onclick="ul(\'vvip\')" style="background:#ea580c">解锁</button>';rules.forEach(r=>{if(r.l==='vip')r.enabled=false})}
   rr();alert('✅ 已解绑。需要时可重新输入原码激活。');
 }
 
